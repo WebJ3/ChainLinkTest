@@ -53,11 +53,11 @@
 	},
 	"sources": {
 		"docs.chain.link/samples/DataFeeds/EnsConsumer-Sepolia.sol": {
-			"keccak256": "0xa0c8df2d6fd713602481338817560c5521f56c2c8fa337a763a3652cf64e88ce",
+			"keccak256": "0x4697fe03a67be69df86bdd7307fa87cec6eb2206fdcb7a577e421f0bf20e61ec",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://1f68ac82712f95b39f9cd90d9b4ad38b1a58db978fda758bab5d01661e27ea0c",
-				"dweb:/ipfs/QmRNbGKdFkv5tTrTsrFk9rRVygRvCaH38TvhxQRCtPuE5M"
+				"bzz-raw://b087fa4ad3bcf762ddb3df277398b799c6b27d9eefc6753096aac49bbc799dd2",
+				"dweb:/ipfs/QmWgMpdTVYdLHp9yNEWSnovaU9caDvhMPjKUUoLEB9A3tT"
 			]
 		}
 	},
