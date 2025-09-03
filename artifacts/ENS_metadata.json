@@ -1,0 +1,66 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "bytes32",
+						"name": "node",
+						"type": "bytes32"
+					}
+				],
+				"name": "resolver",
+				"outputs": [
+					{
+						"internalType": "contract Resolver",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"notice": "THIS IS AN EXAMPLE CONTRACT THAT USES HARDCODED VALUES FOR CLARITY. THIS IS AN EXAMPLE CONTRACT THAT USES UN-AUDITED CODE. DO NOT USE THIS CODE IN PRODUCTION.",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"docs.chain.link/samples/DataFeeds/EnsConsumer-Sepolia.sol": "ENS"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"docs.chain.link/samples/DataFeeds/EnsConsumer-Sepolia.sol": {
+			"keccak256": "0xa0c8df2d6fd713602481338817560c5521f56c2c8fa337a763a3652cf64e88ce",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1f68ac82712f95b39f9cd90d9b4ad38b1a58db978fda758bab5d01661e27ea0c",
+				"dweb:/ipfs/QmRNbGKdFkv5tTrTsrFk9rRVygRvCaH38TvhxQRCtPuE5M"
+			]
+		}
+	},
+	"version": 1
+}
