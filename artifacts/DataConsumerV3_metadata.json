@@ -12,12 +12,71 @@
 			},
 			{
 				"inputs": [],
-				"name": "getChainlinkDataFeedLatestAnswer",
+				"name": "getChainlinkDataFeedLatestRoundData",
 				"outputs": [
 					{
+						"internalType": "uint80",
+						"name": "roundId",
+						"type": "uint80"
+					},
+					{
 						"internalType": "int256",
-						"name": "",
+						"name": "answer",
 						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updatedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint80",
+						"name": "answeredInRound",
+						"type": "uint80"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint80",
+						"name": "inRoundId",
+						"type": "uint80"
+					}
+				],
+				"name": "getHistoricalData",
+				"outputs": [
+					{
+						"internalType": "uint80",
+						"name": "roundId",
+						"type": "uint80"
+					},
+					{
+						"internalType": "int256",
+						"name": "answer",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updatedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint80",
+						"name": "answeredInRound",
+						"type": "uint80"
 					}
 				],
 				"stateMutability": "view",
@@ -26,7 +85,11 @@
 		],
 		"devdoc": {
 			"kind": "dev",
-			"methods": {},
+			"methods": {
+				"getHistoricalData(uint80)": {
+					"details": "A timestamp with zero value means the round is not complete and should not be used."
+				}
+			},
 			"version": 1
 		},
 		"userdoc": {
@@ -35,8 +98,11 @@
 				"constructor": {
 					"notice": "Network: Sepolia Aggregator: BTC/USD Address: 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43"
 				},
-				"getChainlinkDataFeedLatestAnswer()": {
+				"getChainlinkDataFeedLatestRoundData()": {
 					"notice": "Returns the latest answer."
+				},
+				"getHistoricalData(uint80)": {
+					"notice": "Returns historical data for a round ID. roundId is NOT incremental. Not all roundIds are valid. You must know a valid roundId before consuming historical data. ROUNDID VALUES:    InValid:      18446744073709562300    Valid:        18446744073709554683"
 				}
 			},
 			"notice": "If you are reading data feeds on L2 networks, you must check the latest answer from the L2 Sequencer Uptime Feed to ensure that the data is accurate in the event of an L2 sequencer outage. See the https://docs.chain.link/data-feeds/l2-sequencer-feeds page for details.",
@@ -68,11 +134,11 @@
 			]
 		},
 		"docs.chain.link/samples/DataFeeds/DataConsumerV3-Sepolia-BtcPrice.sol": {
-			"keccak256": "0x17f1fd6ec6fd9e66d4e564ba3bcc3ad6556fd8ec9a6c4e2fae77232e79b7bdd9",
+			"keccak256": "0x70df1c0e3b3f97acb7a803e87e76c1139e0603889856223c70975d5d6f00cc0e",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://3b00701a76f28bf978fb7c66e87079d31b1c9a199cc09c9a1b9da5e01b854980",
-				"dweb:/ipfs/QmX46RsoxZnGcp8L5RjzaRea87dNmNBvgx9JE7y6h8jbxA"
+				"bzz-raw://0b355adba6392e862a05c8b41b7a81901c603b51ab46be45e7845fb75b6eff54",
+				"dweb:/ipfs/QmT1QeoVQsswi1Who7bC3hgnZjfFZwHfrJWJtQ1Mt8g7Hx"
 			]
 		}
 	},

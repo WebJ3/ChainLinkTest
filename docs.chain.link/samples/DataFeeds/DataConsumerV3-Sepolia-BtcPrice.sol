@@ -36,15 +36,49 @@ contract DataConsumerV3 {
     /**
      * Returns the latest answer.
      */
-    function getChainlinkDataFeedLatestAnswer() public view returns (int) {
+    function getChainlinkDataFeedLatestRoundData() public view returns (
+        uint80 roundId,
+        int256 answer,
+        uint256 startedAt,
+        uint256 updatedAt,
+        uint80 answeredInRound
+    ) {
+        (
+            roundId,
+            answer,
+            startedAt,
+            updatedAt,
+            answeredInRound
+        ) = dataFeed.latestRoundData();
+        
+        // 直接返回元组（隐式返回所有命名的返回值）
+    }
+
+     /**
+     * Returns historical data for a round ID.
+     * roundId is NOT incremental. Not all roundIds are valid.
+     * You must know a valid roundId before consuming historical data.
+     *
+     * ROUNDID VALUES:
+     *    InValid:      18446744073709562300
+     *    Valid:        18446744073709554683
+     *
+     * @dev A timestamp with zero value means the round is not complete and should not be used.
+     */
+    function getHistoricalData(uint80 inRoundId) public view returns (
+        uint80 roundId,
+        int256 answer,
+        uint256 startedAt,
+        uint256 updatedAt,
+        uint80 answeredInRound
+    ) {
         // prettier-ignore
         (
-            /* uint80 roundId */,
-            int256 answer,
-            /*uint256 startedAt*/,
-            /*uint256 updatedAt*/,
-            /*uint80 answeredInRound*/
-        ) = dataFeed.latestRoundData();
-        return answer;
+            roundId,
+            answer,
+            startedAt,
+            updatedAt,
+            answeredInRound
+        ) = dataFeed.getRoundData(inRoundId);
     }
 }
