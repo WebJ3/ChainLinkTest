@@ -45,7 +45,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"docs.chain.link/samples/DataFeeds/DataConsumerV3.sol": "DataConsumerV3"
+			"docs.chain.link/samples/DataFeeds/DataConsumerV3-Sepolia-BtcPrice.sol": "DataConsumerV3"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -67,7 +67,7 @@
 				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
 			]
 		},
-		"docs.chain.link/samples/DataFeeds/DataConsumerV3.sol": {
+		"docs.chain.link/samples/DataFeeds/DataConsumerV3-Sepolia-BtcPrice.sol": {
 			"keccak256": "0x17f1fd6ec6fd9e66d4e564ba3bcc3ad6556fd8ec9a6c4e2fae77232e79b7bdd9",
 			"license": "MIT",
 			"urls": [
