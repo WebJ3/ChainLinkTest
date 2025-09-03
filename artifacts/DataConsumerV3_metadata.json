@@ -111,7 +111,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"docs.chain.link/samples/DataFeeds/DataConsumerV3-Sepolia-BtcPrice.sol": "DataConsumerV3"
+			"docs.chain.link/samples/DataFeeds/DataConsumer-Sepolia-BtcPrice.sol": "DataConsumerV3"
 		},
 		"evmVersion": "prague",
 		"libraries": {},
@@ -133,12 +133,12 @@
 				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
 			]
 		},
-		"docs.chain.link/samples/DataFeeds/DataConsumerV3-Sepolia-BtcPrice.sol": {
-			"keccak256": "0x70df1c0e3b3f97acb7a803e87e76c1139e0603889856223c70975d5d6f00cc0e",
+		"docs.chain.link/samples/DataFeeds/DataConsumer-Sepolia-BtcPrice.sol": {
+			"keccak256": "0xdd8705444720430798360635c094b37965acb008f45c69d533eeba892d1512bc",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://0b355adba6392e862a05c8b41b7a81901c603b51ab46be45e7845fb75b6eff54",
-				"dweb:/ipfs/QmT1QeoVQsswi1Who7bC3hgnZjfFZwHfrJWJtQ1Mt8g7Hx"
+				"bzz-raw://3d612c4f15571fa61be35bbfc6b82fcad9f710dda434a6e1758c185507790711",
+				"dweb:/ipfs/QmfRmYhvPxRSdJiwW4WD35agWZXEREEordjCaGTXCYECWY"
 			]
 		}
 	},

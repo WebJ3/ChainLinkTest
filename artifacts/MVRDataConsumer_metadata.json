@@ -1,0 +1,336 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "contract IBundleAggregatorProxy",
+						"name": "_proxy",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_stalenessThreshold",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "expected",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "actual",
+						"type": "uint256"
+					}
+				],
+				"name": "InsufficientDecimals",
+				"type": "error"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "lastUpdateTimestamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "blockTimestamp",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "threshold",
+						"type": "uint256"
+					}
+				],
+				"name": "StaleData",
+				"type": "error"
+			},
+			{
+				"inputs": [],
+				"name": "STALENESS_THRESHOLD",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "assetsUnderManagement",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "consumeData",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "decimals",
+				"outputs": [
+					{
+						"internalType": "uint8",
+						"name": "",
+						"type": "uint8"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getLatestBundleTimestamp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "isDataFresh",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "netAssetValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "netIncomeExpenses",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "openToNewInvestors",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "outstandingShares",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rawAssetsUnderManagement",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rawNetAssetValue",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rawNetIncomeExpenses",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "rawOutstandingShares",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "s_proxy",
+				"outputs": [
+					{
+						"internalType": "contract IBundleAggregatorProxy",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "storeDecimals",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"constructor": {
+					"details": "The threshold should be based on the feed's heartbeat interval from documentation For example, if a feed updates every 24 hours (86400s), you might set this to 86400s + some buffer",
+					"params": {
+						"_proxy": "The address of the MVR feed's proxy contract",
+						"_stalenessThreshold": "Maximum time (in seconds) since last update before data is considered stale"
+					}
+				},
+				"consumeData()": {
+					"details": "This process demonstrates the complete flow of consuming MVR feed data: 1. Check data freshness 2. Fetch the raw bytes 3. Decode into the struct matching the feed's data structure 4. Store raw values (preserving original precision) 5. Apply decimal conversions to get the true numerical values"
+				},
+				"isDataFresh()": {
+					"returns": {
+						"_0": "true if data is fresh, false if stale"
+					}
+				},
+				"storeDecimals()": {
+					"details": "Index mapping for this example:      0 -> netAssetValue,      1 -> assetsUnderManagement,      2 -> outstandingShares,      3 -> netIncomeExpenses,      4 -> openToNewInvestors (likely returns 0)."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Constructor that sets the staleness threshold for the feed"
+				},
+				"consumeData()": {
+					"notice": "Fetches and decodes the latest MVR feed data, then stores both the raw and scaled values."
+				},
+				"getLatestBundleTimestamp()": {
+					"notice": "Returns the timestamp of the most recent MVR feed update."
+				},
+				"isDataFresh()": {
+					"notice": "Simple boolean check for data freshness (block explorer friendly)"
+				},
+				"storeDecimals()": {
+					"notice": "Stores the decimals array in your contract for repeated usage."
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"docs.chain.link/samples/DataFeeds/MultipleVariableResponseFeeds-Sepolia.sol": "MVRDataConsumer"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"docs.chain.link/samples/DataFeeds/MultipleVariableResponseFeeds-Sepolia.sol": {
+			"keccak256": "0x27a71578cc1f664ff87a5edfed4a1ea8b00ae01fc3816f368f61c4e8761cf12f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aec18876ddf69cb924a3b9bf92f8c22f342c33a82e5188e75916f526b5edf260",
+				"dweb:/ipfs/QmeH2a87WiLQcYEQyYLfqfb3y6U9EBUqkK6oLiP84DDtxy"
+			]
+		}
+	},
+	"version": 1
+}

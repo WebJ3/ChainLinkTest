@@ -1,0 +1,111 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "bundleDecimals",
+				"outputs": [
+					{
+						"internalType": "uint8[]",
+						"name": "",
+						"type": "uint8[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "latestBundle",
+				"outputs": [
+					{
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "latestBundleTimestamp",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"bundleDecimals()": {
+					"returns": {
+						"_0": "decimalsArray Array of decimals for each value in the bundle"
+					}
+				},
+				"latestBundle()": {
+					"returns": {
+						"_0": "bundle The latest bundle as raw bytes"
+					}
+				},
+				"latestBundleTimestamp()": {
+					"returns": {
+						"_0": "timestamp The timestamp of the latest bundle"
+					}
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"bundleDecimals()": {
+					"notice": "Returns the decimals for each field in the bundle"
+				},
+				"latestBundle()": {
+					"notice": "Returns the latest bundle data"
+				},
+				"latestBundleTimestamp()": {
+					"notice": "Returns the timestamp of the latest bundle"
+				}
+			},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"docs.chain.link/samples/DataFeeds/MultipleVariableResponseFeeds-Sepolia.sol": "IBundleAggregatorProxy"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"docs.chain.link/samples/DataFeeds/MultipleVariableResponseFeeds-Sepolia.sol": {
+			"keccak256": "0x27a71578cc1f664ff87a5edfed4a1ea8b00ae01fc3816f368f61c4e8761cf12f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://aec18876ddf69cb924a3b9bf92f8c22f342c33a82e5188e75916f526b5edf260",
+				"dweb:/ipfs/QmeH2a87WiLQcYEQyYLfqfb3y6U9EBUqkK6oLiP84DDtxy"
+			]
+		}
+	},
+	"version": 1
+}
