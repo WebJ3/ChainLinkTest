@@ -1,0 +1,146 @@
+{
+	"compiler": {
+		"version": "0.8.30+commit.73712a01"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "getChainlinkDataFeedLatestRoundData",
+				"outputs": [
+					{
+						"internalType": "uint80",
+						"name": "roundId",
+						"type": "uint80"
+					},
+					{
+						"internalType": "int256",
+						"name": "answer",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updatedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint80",
+						"name": "answeredInRound",
+						"type": "uint80"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint80",
+						"name": "inRoundId",
+						"type": "uint80"
+					}
+				],
+				"name": "getHistoricalData",
+				"outputs": [
+					{
+						"internalType": "uint80",
+						"name": "roundId",
+						"type": "uint80"
+					},
+					{
+						"internalType": "int256",
+						"name": "answer",
+						"type": "int256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "startedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "updatedAt",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint80",
+						"name": "answeredInRound",
+						"type": "uint80"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {
+				"getHistoricalData(uint80)": {
+					"details": "A timestamp with zero value means the round is not complete and should not be used."
+				}
+			},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {
+				"constructor": {
+					"notice": "Network: Sepolia Aggregator: BTC/USD Address: 0x1b44F3514812d835EB1BDB0acB33d3fA3351Ee43， SVR aggregator's address"
+				},
+				"getChainlinkDataFeedLatestRoundData()": {
+					"notice": "Returns the latest answer."
+				},
+				"getHistoricalData(uint80)": {
+					"notice": "Returns historical data for a round ID. roundId is NOT incremental. Not all roundIds are valid. You must know a valid roundId before consuming historical data. ROUNDID VALUES:    InValid:      18446744073709562300    Valid:        18446744073709554683"
+				}
+			},
+			"notice": "Smart Value Recapture智能价值回收数据源 https://docs.chain.link/data-feeds/svr-feeds 数据的生成和签名：价格数据始终由去中心化的 Chainlink 预言机网络在链下生成、聚合并完成密码学签名。搜索者无法伪造或篡改这个数据。 更新触发者\tChainlink 预言机节点 (按心跳或偏差阈值触发)\t搜索者 (通过竞拍获得触发权限) 核心经济机制:预言机节点支付Gas费，协议支付服务费用\t搜索者竞拍支付Gas费和溢价，溢价部分在协议和Chainlink网络间分配 搜索者的角色：搜索者只是通过竞拍，获得了将这份已经由权威生成并签名好的数据“广播”到链上的权利。他们更像是“信使”，而不是“新闻制造者”。 交易的原子性：获胜搜索者发出的交易是“原子化”的，意味着它包含两个不可分割的操作： 操作一：调用 SVR Feed 合约，验证预言机签名并更新价格。 操作二：立即执行自己的清算逻辑。 这样设计的好处是： 安全可信：价格数据的真实性由 Chainlink 网络保证，搜索者无法作恶。 公平竞争：所有搜索者竞争的是同一个权威数据的上链权，起跑线是公平的。 效率最高：从价格更新到清算完成在一个交易内完成，速度最快，避免了被其他机器人抢跑的风险。*",
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"docs.chain.link/samples/DataFeeds/DataConsumerSVR-Seplia-BtcPrice.sol": "SVRConsumer"
+		},
+		"evmVersion": "prague",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"@chainlink/contracts@1.4.0/src/v0.8/shared/interfaces/AggregatorV3Interface.sol": {
+			"keccak256": "0x257a8d28fa83d3d942547c8e129ef465e4b5f3f31171e7be4739a4c98da6b4f0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6d39e11b1dc7b9b8ccdabbc9be442ab7cda4a81c748f57e316dcb1bcb4a28bf9",
+				"dweb:/ipfs/QmaG6vz6W6iEUBsbHSBob5mdcitYxWjoygxREHpsJHfWrS"
+			]
+		},
+		"docs.chain.link/samples/DataFeeds/DataConsumerSVR-Seplia-BtcPrice.sol": {
+			"keccak256": "0x263946ddbd5a162c1fe7b928851e974fb21f61756a432a7c886b01eb220a0867",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://ce755ab42c174aae8635c899f088cf3173a3030cb1c7702ce781204e281110f5",
+				"dweb:/ipfs/Qmdiq3Z9QWye8m6bsJHqszUrxn7zcNTu6AU3e7tM1j1bcf"
+			]
+		}
+	},
+	"version": 1
+}
